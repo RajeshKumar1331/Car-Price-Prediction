@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="/static/forms.css">
+    
+    <title>Car Price Prediction</title>
+  </head>
+  <body>
+    <form action="/submit" method="POST">
+      <div class="leftContainer">
+
+        <div class="entry"> 
+          <p>Year of Purchase</p>
+          <input class="entry-box" type="text" name="year" placeholder="Enter the year" required />
+        </div>
+
+        <div class="entry">
+          <p>Price</p>
+          <input class="entry-box" type="text" name="price" placeholder="Enter the showroom price in rupees" required/>
+        </div>
+
+        <div class="entry">
+          <p>Kilometers Driven</p>
+          <input class="entry-box" type="text" name="no_of_kms" placeholder="Enter the no of km driven" required/>
+        </div>
+
+        <div class="entry">
+          <p>Previous owners</p>
+          <input class="entry-box" type="text" name="no_of_owners" placeholder="Enter the no of previous owners" required
+          />
+        </div>
+      </div>
+
+
+
+
+      <div class="rightContainer">
+
+
+        <div class="entry">
+          <p>Fuel Type</p>
+          <select class="drop_down" name="fuel" required >
+            <option value="" selected disabled hidden>Select an option</option>
+            <option  value="cng">CNG</option>
+            <option  value="petrol">Petrol</option>
+            <option  value="diesel">Diesel</option>
+          </select>
+        </div>
+
+
+        <div class="entry">
+          <p>Seller Type</p>
+          <select class="drop_down" name="D_I" required>
+            <option value="" selected disabled hidden>Select an option</option>
+            <option value="dealer">Dealer</option>
+            <option value="individual">Individual</option>
+          </select>
+          
+        </div>
+
+
+        <div class="entry">
+          <p>Transmission Type</p>
+          <select class="drop_down" name="transmission_type" required>
+            <option value="" selected disabled hidden>Select an option</option>
+            <option value="manual">Manual</option>
+            <option value="automatic">Automatic</option>
+          </select>
+          
+        </div>
+
+
+        <div >
+          <input class="clear"type="reset" />
+        </div>
+
+      </div>
+
+      <div class="submit-button">
+        <input class="button" type="submit" value="Check Price" />
+      </div>
+
+    </form>
+
+
+    <h3>{{ Prediction }}</h3>
+  </body>
+</html>
